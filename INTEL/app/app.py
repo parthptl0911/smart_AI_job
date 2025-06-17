@@ -1,4 +1,17 @@
 import os
+import sys
+import subprocess
+
+# Auto-install ortools if not found
+try:
+    from ortools.sat.python import cp_model
+except ModuleNotFoundError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "ortools"])
+    from ortools.sat.python import cp_model
+
+
+
+
 os.system('pip install ortools')
 from ortools.sat.python import cp_model
 
