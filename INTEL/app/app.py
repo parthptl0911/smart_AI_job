@@ -1,3 +1,7 @@
+import os
+os.system('pip install ortools')
+from ortools.sat.python import cp_model
+
 import streamlit as st
 import pandas as pd
 import sys
